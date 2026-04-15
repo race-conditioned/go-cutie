@@ -43,9 +43,10 @@ Syntax-highlighted JSON in the terminal, plain JSON when piped.
 log := cutie.New(cutie.NewJSONHandler(nil))
 
 // Expanded, color forced off
+noColor := false
 log := cutie.New(cutie.NewJSONHandler(&cutie.JSONHandlerOptions{
     Expand: true,
-    Color:  ptrBool(false),
+    Color:  &noColor,
 }))
 ```
 
